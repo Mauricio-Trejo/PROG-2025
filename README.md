@@ -1,2 +1,2 @@
-Programación básica Enrro-Junio 2025<br>
+Programación básica Enero-Junio 2025<br>
 Portafolio de evidencias
