@@ -1,0 +1,1 @@
+Hola mundo, se creó desde Python un archivo de texto
