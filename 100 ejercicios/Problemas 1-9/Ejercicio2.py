@@ -61,7 +61,7 @@ def division(dividendo, divisor):
             ndivisor = int(input("La división entre 0 es imposible todadvía.\nIngrese otro valor para el divisor"))
             if ndivisor != 0:
                 bDiv0 = False
-        return dividendo/division
+        return dividendo/ndivisor
     
 def divisionEntera(dividendo, divisor):
     if divisor != 0:
@@ -94,13 +94,15 @@ def divisionMenu():
         op2 = int(input('Ingrese la opción deseada: '))
         if op2 == 1:
             t1 = leerNumeros()
-            division(t1[0], t1[1])
+            print(division(t1[0], t1[1]))
         elif op2 == 2:
             t2 = leerNumeros()
-            divisionEntera(t2[0], t2[1])
+            print(divisionEntera(t2[0], t2[1]))
         elif op2 == 3:
             t3 = leerNumeros()
-            leerNumeros(t3[0], t3[1])
+            print(divisionResiduo(t3[0], t3[1]))
+        elif op2 == 4:
+            break
         else:
             print('Opción inválida')
 
@@ -116,18 +118,23 @@ while(bMenu1):
     if op == 'E':
         tE = leerNumeros()
         print(exponentes(tE[0], tE[1]))
+        tskip = input('Presiona una tecla para continuar...')
     elif op == 'M':
         tM = leerNumeros()
         print(multiplicacion(tM[0], tM[1]))
+        tskip = input('Presiona una tecla para continuar...')
     elif op == 'D':
         bMenu2 = True
-        print(divisionMenu())
+        divisionMenu()
+        tskip = input('Presiona una tecla para continuar...')
     elif op == 'A':
         tA = leerNumeros()
         print(adicion(tA[0], tA[1]))
+        tskip = input('Presiona una tecla para continuar...')
     elif op == 'S':
         tS = leerNumeros()
         print(sustraccion(tS[0], tS[1]))
+        tskip = input('Presiona una tecla para continuar...')
 
     elif op == 'X':
         bMenu1 = False
